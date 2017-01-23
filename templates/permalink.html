@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{post.render() | safe}}
+  <br><br>
+  {% for c in coms %}
+  	{% if c.postid == post.key().id() %}
+  		{{ c.render() | safe }}
+  	{% endif %}
+  {% endfor %}
+{% endblock %}

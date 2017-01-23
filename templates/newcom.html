@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Post:</h2>
+  <div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{subject}}
+      ({{uid}})
+    </div>
+  </div>
+  <div class="post-content">
+    {{content}}
+  </div>
+</div>
+<br>
+<form method="post">
+  <label>
+    <div>comment</div>
+    <textarea name="comcontent"></textarea>
+  </label>
+
+  <div class="error">{{error}}</div>
+
+  <input type="submit">
+</form>
+<a href="/blog"><button>Cancel</button></a>
+{% endblock %}
